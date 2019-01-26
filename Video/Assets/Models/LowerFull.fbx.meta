@@ -8,6 +8,8 @@ ModelImporter:
     400000: //RootNode
     400002: node_id3
     2100000: Material_32
+    2100002: lambert2
+    2100004: Material_33
     2300000: node_id3
     3300000: node_id3
     4300000: node_id3

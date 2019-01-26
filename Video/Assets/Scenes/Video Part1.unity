@@ -1544,6 +1544,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
+  - {fileID: 2100002, guid: b2996852f60eb7340838c0115c2f3b0f, type: 3}
   - {fileID: 2100000, guid: af79e72f24511914fb3d7e791990af07, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
@@ -1579,6 +1580,16 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 626971406}
     m_Modifications:
+    - target: {fileID: 23050509482860542, guid: b5764ec35620832438822d73cdd50aaf,
+        type: 2}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 23519495665109246, guid: b5764ec35620832438822d73cdd50aaf,
+        type: 2}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4241471951933704, guid: b5764ec35620832438822d73cdd50aaf, type: 2}
       propertyPath: m_LocalPosition.x
       value: 0.16
@@ -1679,6 +1690,26 @@ Prefab:
       propertyPath: m_LocalPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 23050509482860542, guid: b5764ec35620832438822d73cdd50aaf,
+        type: 2}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 8cb7dc84e804ded4fba34dcac28c0d0c, type: 2}
+    - target: {fileID: 23050509482860542, guid: b5764ec35620832438822d73cdd50aaf,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100002, guid: e4e236866e9c33043b278a91e6eee6e9, type: 3}
+    - target: {fileID: 23519495665109246, guid: b5764ec35620832438822d73cdd50aaf,
+        type: 2}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 8cb7dc84e804ded4fba34dcac28c0d0c, type: 2}
+    - target: {fileID: 23519495665109246, guid: b5764ec35620832438822d73cdd50aaf,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100002, guid: b2996852f60eb7340838c0115c2f3b0f, type: 3}
     m_RemovedComponents:
     - {fileID: 95163695008687450, guid: b5764ec35620832438822d73cdd50aaf, type: 2}
     - {fileID: 320047627921667798, guid: b5764ec35620832438822d73cdd50aaf, type: 2}
