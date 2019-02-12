@@ -3531,6 +3531,17 @@ AnimationClip:
   m_HasMotionFloatCurves: 0
   m_GenerateMotionCurves: 1
   m_Events: []
+--- !u!114 &114000480189452258
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 442072544, guid: 6a10b2909283487f913b00d94cd3faf5, type: 3}
+  m_Name: ActivationPlayableAsset
+  m_EditorClassIdentifier: 
 --- !u!114 &114000839803500604
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3806,6 +3817,17 @@ MonoBehaviour:
   m_ApplyAvatarMask: 1
   m_OpenClipOffsetRotation: {x: 0, y: 0, z: 0, w: 1}
   m_Rotation: {x: 0, y: 0, z: 0, w: 1}
+--- !u!114 &114056623545495724
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 442072544, guid: 6a10b2909283487f913b00d94cd3faf5, type: 3}
+  m_Name: ActivationPlayableAsset
+  m_EditorClassIdentifier: 
 --- !u!114 &114062141342217320
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4767,7 +4789,7 @@ MonoBehaviour:
     m_Version: 1
   - m_Start: 32
     m_ClipIn: 0
-    m_Asset: {fileID: 0}
+    m_Asset: {fileID: 114056623545495724}
     m_Duration: 1.5
     m_TimeScale: 1
     m_ParentTrack: {fileID: 114304440732620032}
@@ -5202,7 +5224,7 @@ MonoBehaviour:
     m_Version: 1
   - m_Start: 32
     m_ClipIn: 0
-    m_Asset: {fileID: 0}
+    m_Asset: {fileID: 114000480189452258}
     m_Duration: 1.5
     m_TimeScale: 1
     m_ParentTrack: {fileID: 114484313221733894}
