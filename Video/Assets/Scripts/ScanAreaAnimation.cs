@@ -108,8 +108,8 @@ public class ScanAreaAnimation : MonoBehaviour
 
 
             case AnimationState.FIRST5_STATE:
-                float TimeGap = (AnimTime - First5Time) / AreaSize / 5;
-                int currentIndex = (int)((counterT - First5Time) / TimeGap);
+                float Percentage = (AnimTime - First5Time) / AreaSize / 5;
+                int currentIndex = (int)((counterT - First5Time) / Percentage);
 
                 // 開始找
                 for (int i = 0; i < 5; i++)
@@ -129,8 +129,8 @@ public class ScanAreaAnimation : MonoBehaviour
                 break;
 
             case AnimationState.ANIM_STATE:
-                TimeGap = (EndTime - AnimTime) / (AreaSize - 5) / AreaSize;
-                currentIndex = (int)((counterT - AnimTime) / TimeGap);
+                Percentage = (EndTime - AnimTime) / (AreaSize - 5) / AreaSize;
+                currentIndex = (int)((counterT - AnimTime) / Percentage);
 
                 // 開始找
                 for (int i = 0; i < 5; i++)
@@ -150,8 +150,6 @@ public class ScanAreaAnimation : MonoBehaviour
                     }
                 }
                 break;
-
-                
         }
     }
 }
