@@ -34,7 +34,8 @@ public class ScanAreaAnimation : MonoBehaviour
 
     // 陣列相關
     private List<GameObject> AreaImageArray = new List<GameObject>();
-    private int AreaSize = 100;
+    private int AreaSize = 20;
+    private float DotWidth = 5;
     private int OffsetValue = 60;
 
     private void Start ()
@@ -51,11 +52,11 @@ public class ScanAreaAnimation : MonoBehaviour
             RectTransform rectT = tempObj.GetComponent<RectTransform>();
 
             if(w > AreaSize / 2)
-                rectT.anchoredPosition = new Vector3(w - AreaSize, 0, 0) + StartLocation;
+                rectT.anchoredPosition = new Vector3(w - AreaSize, 0, 0) * DotWidth + StartLocation;
             else
-                rectT.anchoredPosition = new Vector3(w, 0, 0) + StartLocation;
+                rectT.anchoredPosition = new Vector3(w, 0, 0) * DotWidth + StartLocation;
 
-            rectT.sizeDelta = new Vector2(1, 0);
+            rectT.sizeDelta = new Vector2(DotWidth, 0);
             rectT.localRotation = Quaternion.identity;
             rectT.localScale = new Vector3(1, 1, 1);
 
@@ -80,7 +81,7 @@ public class ScanAreaAnimation : MonoBehaviour
             state = AnimationState.END_STATE;
 
             for (int i = 0; i < AreaImageArray.Count; i++)
-                AreaImageArray[i].GetComponent<RectTransform>().sizeDelta = new Vector2(1, AreaSize);
+                AreaImageArray[i].GetComponent<RectTransform>().sizeDelta = new Vector2(DotWidth, AreaSize * DotWidth);
         }
         if (counterT >= OtherOffsetTime)
         {
@@ -91,9 +92,9 @@ public class ScanAreaAnimation : MonoBehaviour
                 RectTransform rectT = AreaImageArray[w].GetComponent<RectTransform>();
 
                 if (w > AreaSize / 2)
-                    rectT.anchoredPosition = new Vector3(w - AreaSize, 0, 0) + StartLocation + new Vector3(OffsetValue, 0, 0);
+                    rectT.anchoredPosition = new Vector3(w - AreaSize, 0, 0) * DotWidth + StartLocation + new Vector3(OffsetValue, 0, 0);
                 else
-                    rectT.anchoredPosition = new Vector3(w, 0, 0) + StartLocation + new Vector3(OffsetValue, 0, 0);
+                    rectT.anchoredPosition = new Vector3(w, 0, 0) * DotWidth + StartLocation + new Vector3(OffsetValue, 0, 0);
             }
             this.enabled = false;
         }
@@ -101,9 +102,9 @@ public class ScanAreaAnimation : MonoBehaviour
         switch (state)
         {
             case AnimationState.SHOW_STATE:
-                AreaImageArray[0].GetComponent<RectTransform>().sizeDelta = new Vector2(1, 1);
+                AreaImageArray[0].GetComponent<RectTransform>().sizeDelta = new Vector2(DotWidth, DotWidth);
                 for(int i = 1; i < AreaImageArray.Count; i++)
-                    AreaImageArray[i].GetComponent<RectTransform>().sizeDelta = new Vector2(1, 0);
+                    AreaImageArray[i].GetComponent<RectTransform>().sizeDelta = new Vector2(DotWidth, 0);
                 break;
 
 
@@ -117,13 +118,13 @@ public class ScanAreaAnimation : MonoBehaviour
                     RectTransform rectTemp = AreaImageArray[i].GetComponent<RectTransform>();
 
                     if (i * AreaSize < currentIndex - currentIndex % AreaSize)
-                        rectTemp.sizeDelta = new Vector2(1, AreaSize);
+                        rectTemp.sizeDelta = new Vector2(DotWidth, AreaSize * DotWidth);
                     else if (i * AreaSize >= currentIndex)
-                        rectTemp.sizeDelta = new Vector2(1, 0);
+                        rectTemp.sizeDelta = new Vector2(DotWidth, 0);
                     else
                     {
                         currentIndex %= AreaSize;
-                        rectTemp.sizeDelta = new Vector2(1, currentIndex);
+                        rectTemp.sizeDelta = new Vector2(DotWidth, currentIndex * DotWidth);
                     }
                 }
                 break;
@@ -134,19 +135,19 @@ public class ScanAreaAnimation : MonoBehaviour
 
                 // 開始找
                 for (int i = 0; i < 5; i++)
-                    AreaImageArray[i].GetComponent<RectTransform>().sizeDelta = new Vector2(1, AreaSize);
+                    AreaImageArray[i].GetComponent<RectTransform>().sizeDelta = new Vector2(DotWidth, AreaSize * DotWidth);
                 for (int i = 5; i < AreaSize; i++)
                 {
                     RectTransform rectTemp = AreaImageArray[i].GetComponent<RectTransform>();
 
                     if ((i - 5) * AreaSize < currentIndex - currentIndex % AreaSize)
-                        rectTemp.sizeDelta = new Vector2(1, AreaSize);
+                        rectTemp.sizeDelta = new Vector2(DotWidth, AreaSize * DotWidth);
                     else if ((i - 5) * AreaSize >= currentIndex)
-                        rectTemp.sizeDelta = new Vector2(1, 0);
+                        rectTemp.sizeDelta = new Vector2(DotWidth, 0);
                     else
                     {
                         currentIndex %= AreaSize;
-                        rectTemp.sizeDelta = new Vector2(1, currentIndex);
+                        rectTemp.sizeDelta = new Vector2(DotWidth, currentIndex * DotWidth);
                     }
                 }
                 break;

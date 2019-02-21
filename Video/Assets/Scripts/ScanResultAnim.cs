@@ -38,7 +38,7 @@ public class ScanResultAnim : MonoBehaviour
     public ScanAreaState state = ScanAreaState.DISAPPER_STATE;
     private float counterT = 0;
     private float MoveOffset = 10;
-    private int AreaSize = 100;
+    private int AreaSize = 20;
     private float MovingStartTime;
     private int FladeOutStart = 5;
     private int FladeOutEnd = 10;

@@ -978,7 +978,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
   m_AnchoredPosition: {x: -40, y: 0}
-  m_SizeDelta: {x: 1, y: 1}
+  m_SizeDelta: {x: 5, y: 5}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &755419968
 MonoBehaviour:
@@ -1662,8 +1662,8 @@ MonoBehaviour:
   ShowTime: 34
   First5Time: 34
   AnimTime: 39
-  EndTime: 41
-  OtherOffsetTime: 50
+  EndTime: 49
+  OtherOffsetTime: 60
   c: {r: 0, g: 0, b: 1, a: 0.37254903}
 --- !u!114 &1538136236
 MonoBehaviour:
@@ -1711,7 +1711,7 @@ MonoBehaviour:
   ShowTime: 34
   First5Time: 34
   AnimTime: 39
-  EndTime: 41
+  EndTime: 49
   BlendingInTime: 1
   MoveBackTime: 0.001
   state: 0

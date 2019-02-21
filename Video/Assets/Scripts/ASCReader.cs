@@ -47,6 +47,7 @@ public class ASCReader : MonoBehaviour
     public Vector3 WithoutGyro2_Angle;
     public Vector3 WithGyro_Angle;
     public Vector3 WithGyro;
+    public float ScaleSize = 1;
 
     // 劃出來所需要的 DataType
     private List<Vector3> DataArray = new List<Vector3>();
@@ -59,7 +60,7 @@ public class ASCReader : MonoBehaviour
 
     // 一些常數
     private int indexOffset = 25;
-    private float PointSize = 0.01f;
+    private float PointSize = 0.02f;
     private float ScaleFactor = 0.6f;
 
     private void Start()
@@ -78,7 +79,7 @@ public class ASCReader : MonoBehaviour
                 b = float.Parse(lineData[1]);
                 c = float.Parse(lineData[2]);
 
-                Vector3 point = new Vector3(a, b, c);
+                Vector3 point = new Vector3(a, b, c) * ScaleSize;
                 DataArray.Add(point);
 
                 MidPoint += point;
@@ -195,7 +196,7 @@ public class ASCReader : MonoBehaviour
                     }
                     break;
                 }
-                #endregion
+            #endregion
         }
     }
 
