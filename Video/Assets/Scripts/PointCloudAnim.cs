@@ -22,7 +22,7 @@ public class PointCloudAnim : MonoBehaviour
     private Vector3 LastOffsetPoint = new Vector3(0, 0, 0);
     private Vector3 MidPoint = new Vector3(0,0,0);
     private float ScaleSize = 1;
-    private float PointSize = 0.02f;
+    private float PointSize = 0.06f;
     private int SkipOffset = 25;
     private float MinX = 100;
     private float MaxX = -100;
